@@ -1,6 +1,6 @@
 package com.javaex.ex11;
 
-//강사님이 내주신 tv만들기 문제
+//tv만들기 문제
 
 public class TVApp {
 	
@@ -22,6 +22,7 @@ public class TVApp {
 		tv.channel(true);
 		tv.channel(true);
 		tv.channel(true);
+		tv.channel(false);
 		tv.status();
 		
 		tv.power(false);

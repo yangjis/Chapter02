@@ -1,6 +1,6 @@
 package com.javaex.ex11;
 
-//강사님이 내주신 tv만들기 문제
+//tv만들기 문제
 
 public class TV {
 	
@@ -41,7 +41,7 @@ public class TV {
 			System.out.println("tv를 켰습니다.");
 		}else {
 			this.power = power;
-			System.out.println("tv를 껐습니다.");
+			System.out.println("tv 껐습니다.");
 		}
 	}
 	
@@ -56,12 +56,18 @@ public class TV {
 	}
 	public void channel(boolean up) {
 		if(this.channel > 0 && this.channel < 256) {
-			System.out.println("채널을 올립니다.");
-			channel ++;
-			System.out.println("지금 채널은 " + this.channel + "번 입니다.");
+			if(up == true){
+				System.out.println("채널을 올립니다.");
+				this.channel ++;
+				System.out.println("지금 채널은 " + this.channel + "번 입니다.");
+			}else {
+				System.out.println("채널을 내립니다.");
+				this.channel--;
+				System.out.println("지금 채널은 " + this.channel + "번 입니다.");
+			}
 		}else {
 			System.out.println("채널을 올릴 수 없습니다.");
-			channel = 7;
+			this.channel = 7;
 			System.out.println("지금 채널은 " + this.channel + "번 입니다.");
 		}
 	}
