@@ -11,6 +11,10 @@ package com.javaex.ex06;
 2)노래정보를 출력하는 showInfo()메소드를 작성하세요.*/
 
 
+
+/*2.생성자를 사용해보자.*/
+
+
 public class Song {
 	
 	private String title;
@@ -19,6 +23,15 @@ public class Song {
 	private String composer;
 	private int year;
 	private int track;
+	
+	public Song(String title, String artist, String album, String composer, int year, int track) {
+	  this.title = title;
+	  this.artist = artist;
+	  this.album = album;
+	  this.composer = composer;
+	  this.year = year;
+	  this.track = track;
+	}
 	
 	public String getTitle() {
 		return title;

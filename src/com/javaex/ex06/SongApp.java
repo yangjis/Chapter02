@@ -11,35 +11,42 @@ package com.javaex.ex06;
 2)노래정보를 출력하는 showInfo()메소드를 작성하세요.*/
 
 
+
+/*2.생성자를 사용해보자.*/
+
 public class SongApp {
 
 	public static void main(String[] args) {
-		
-		Song iu = new Song();
+
+		/*Song iu = new Song();
 		Song bigbank = new Song();
 		Song bskbsk = new Song();
-		
+
 		iu.setArtist("아이유");
 		iu.setTitle("좋은날");
 		iu.setAlbum("Real");
 		iu.setYear(2010);
 		iu.setTrack(3);
 		iu.setComposer("이수만");
-		
+
 		bigbank.setArtist("BIGBANK");
 		bigbank.setTitle("거짓말");
 		bigbank.setAlbum("Always");
 		bigbank.setYear(2007);
 		bigbank.setTrack(2);
 		bigbank.setComposer("G-DRAGON");
-		
+
 		bskbsk.setArtist("버스커버스커");
 		bskbsk.setTitle("벚꽃엔딩");
 		bskbsk.setAlbum("버스커버스커1집");
 		bskbsk.setYear(2012);
 		bskbsk.setTrack(4);
-		bskbsk.setComposer("장범준");
+		bskbsk.setComposer("장범준");*/
 		
+		Song iu = new Song("아이유", "좋은날", "Real", "이수만", 2010, 3);
+		Song bigbank = new Song("BIGBANK", "거짓말", "Always", "G-DRAGON", 2007, 2);
+		Song bskbsk = new Song("버스커버스커", "벚꽃엔딩", "버스커버스커1집", "장범준", 2012, 4);
+
 		iu.showInfo();
 		bigbank.showInfo();
 		bskbsk.showInfo();
