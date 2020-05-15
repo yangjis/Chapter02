@@ -87,7 +87,11 @@ public class TV {
 	}
 	
 	public void status() {
-		System.out.println(power+", " + volume+ ", " + channel);
+		if(power == true) {
+			System.out.println("티비는 켜있습니다." + "/볼륨: " + volume+ "/ 채널: " + channel);
+		}else {
+			System.out.println("티비는 꺼져있습니다." + "/볼륨: " + volume+ "/ 채널: " + channel);
+		}
 	}
 	
 
