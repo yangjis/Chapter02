@@ -9,7 +9,7 @@ public class TV {
 	private boolean power = false;
 	
 	public TV() {}
-	public TV(int channel, int voluem, boolean power) {
+	public TV(int channel, int volume, boolean power) {
 		this.channel = channel;
 		this.volume = volume;
 		this.power = power;
@@ -41,27 +41,28 @@ public class TV {
 			System.out.println("tv를 켰습니다.");
 		}else {
 			this.power = power;
-			System.out.println("tv는 꺼져있습니다.");
+			System.out.println("tv를 껐습니다.");
 		}
 	}
 	
 	public void channel(int channel) {
 		if(channel > 0 && channel < 256 ) {
-			System.out.println("지금 체널은" + channel + "번 입니다.");
+			System.out.println("지금 체널은" + this.channel + "번 입니다.");
 		}else {
 			this.channel = 7;
-			System.out.println("지금 채널은" + channel+ " 번 입니다.");
+			System.out.println("사용할 수 없는 채널입니다.");
+			System.out.println("지금 채널은 " + this.channel+ "번 입니다.");
 		}
 	}
 	public void channel(boolean up) {
 		if(this.channel > 0 && this.channel < 256) {
 			System.out.println("채널을 올립니다.");
 			channel ++;
-			System.out.println("지금 채널은" + this.channel + "입니다.");
+			System.out.println("지금 채널은 " + this.channel + "번 입니다.");
 		}else {
 			System.out.println("채널을 올릴 수 없습니다.");
 			channel = 7;
-			System.out.println("지금 채널은" + this.channel + "입니다.");
+			System.out.println("지금 채널은 " + this.channel + "번 입니다.");
 		}
 	}
 	public void volume(int volume) {
