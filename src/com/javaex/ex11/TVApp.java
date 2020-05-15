@@ -14,6 +14,7 @@ public class TVApp {
 		tv.status();
 		
 		tv.volume(false);
+		tv.volume(true);
 		tv.status();
 		
 		tv.channel(0);

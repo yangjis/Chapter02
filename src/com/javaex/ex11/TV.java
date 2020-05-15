@@ -41,7 +41,7 @@ public class TV {
 			System.out.println("tv를 켰습니다.");
 		}else {
 			this.power = power;
-			System.out.println("tv 껐습니다.");
+			System.out.println("tv를 껐습니다.");
 		}
 	}
 	
@@ -82,10 +82,16 @@ public class TV {
 		}
 	}
 	public void volume(boolean up) {
-		if(volume > 0 && volume <101) {
-			System.out.println("볼륨을 올립니다.");
-			volume ++;
-			System.out.println("현재 볼륨은 " + volume + " 입니다.");
+		if(volume > 0 && volume <101) { 
+			if(up == true) {
+				System.out.println("볼륨을 올립니다.");
+				this.volume++;
+				System.out.println("현재 볼륨은 " + this.volume + " 입니다.");
+			}else {
+				System.out.println("볼륨을 내립니다.");
+				this.volume--;
+				System.out.println("현재 볼륨은 " + this.volume + " 입니다.");
+			}
 		}else {
 			System.out.println("볼륨을 올릴 수 없습니다.");
 			volume = 20;
