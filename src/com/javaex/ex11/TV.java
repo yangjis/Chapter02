@@ -36,7 +36,7 @@ public class TV {
 	}
 	
 	public void power(boolean power) {
-		if(power == true) {
+		if(power) {
 			this.power = power;
 			System.out.println("tv를 켰습니다.");
 		}else {
@@ -47,28 +47,21 @@ public class TV {
 	
 	public void channel(int channel) {
 		if(channel > 0 && channel < 256 ) {
+			this.channel = channel;
 			System.out.println("지금 체널은" + this.channel + "번 입니다.");
 		}else {
-			this.channel = 7;
 			System.out.println("사용할 수 없는 채널입니다.");
-			System.out.println("지금 채널은 " + this.channel+ "번 입니다.");
 		}
 	}
 	public void channel(boolean up) {
-		if(this.channel > 0 && this.channel < 256) {
-			if(up){
-				System.out.println("채널을 올립니다.");
-				this.channel ++;
-				System.out.println("지금 채널은 " + this.channel + "번 입니다.");
-			}else {
-				System.out.println("채널을 내립니다.");
-				this.channel--;
-				System.out.println("지금 채널은 " + this.channel + "번 입니다.");
-			}
+		if(up){
+			channel(this.channel + 1);
+			System.out.println("채널을 올립니다.");
+			this.channel ++;
 		}else {
-			System.out.println("채널을 올릴 수 없습니다.");
-			this.channel = 7;
-			System.out.println("지금 채널은 " + this.channel + "번 입니다.");
+			channel(this.channel + 1);
+			System.out.println("채널을 내립니다.");
+			this.channel--;
 		}
 	}
 	public void volume(int volume) {
@@ -77,26 +70,18 @@ public class TV {
 			System.out.println("현재 볼륨은 " + this.volume + " 입니다.");
 		}else {
 			System.out.println("더이상 볼륨을 높일 수 없습니다.");
-			this.volume = 20;
-			System.out.println("현재 볼륨은 " + this.volume + " 입니다.");
 		}
 	}
 	public void volume(boolean up) {
-		if(volume > 0 && volume <101) { 
 			if(up) {
+				volume(this.volume + 1);
 				System.out.println("볼륨을 올립니다.");
 				this.volume++;
-				System.out.println("현재 볼륨은 " + this.volume + " 입니다.");
 			}else {
+				volume(this.volume + 1);
 				System.out.println("볼륨을 내립니다.");
 				this.volume--;
-				System.out.println("현재 볼륨은 " + this.volume + " 입니다.");
 			}
-		}else {
-			System.out.println("볼륨을 올릴 수 없습니다.");
-			volume = 20;
-			System.out.println("현재 볼륨은 " + volume + " 입니다.");
-		}
 	}
 	
 	public void status() {
