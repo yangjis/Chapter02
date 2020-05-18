@@ -56,7 +56,7 @@ public class TV {
 	}
 	public void channel(boolean up) {
 		if(this.channel > 0 && this.channel < 256) {
-			if(up == true){
+			if(up){
 				System.out.println("채널을 올립니다.");
 				this.channel ++;
 				System.out.println("지금 채널은 " + this.channel + "번 입니다.");
@@ -83,7 +83,7 @@ public class TV {
 	}
 	public void volume(boolean up) {
 		if(volume > 0 && volume <101) { 
-			if(up == true) {
+			if(up) {
 				System.out.println("볼륨을 올립니다.");
 				this.volume++;
 				System.out.println("현재 볼륨은 " + this.volume + " 입니다.");
@@ -100,7 +100,7 @@ public class TV {
 	}
 	
 	public void status() {
-		if(power == true) {
+		if(power) {
 			System.out.println("티비는 켜있습니다." + "/볼륨: " + volume+ "/ 채널: " + channel);
 		}else {
 			System.out.println("티비는 꺼져있습니다." + "/볼륨: " + volume+ "/ 채널: " + channel);
